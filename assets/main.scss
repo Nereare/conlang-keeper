@@ -13,3 +13,10 @@
 @forward "~@fontsource/quicksand";
 @forward "~@fontsource/cutive-mono";
 @forward "~@mdi/font/scss/materialdesignicons.scss";
+
+.login.hero {
+  figure {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,4 +1,7 @@
 {% extends 'skeleton.html.twig' %}
+
+{% set login = false %}
+
 {% block body %}
 <nav class="navbar is-primary is-fixed-top has-shadow" id="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -19,8 +22,10 @@
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item">Logout</a>
+      <a class="navbar-item" href="{{ path('_logout_main') }}">Logout</a>
     </div>
   </div>
 </nav>
+
+{% block main %}{% endblock %}
 {% endblock %}

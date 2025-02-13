@@ -1,0 +1,48 @@
+{% extends 'skeleton.html.twig' %}
+
+{% set login = true %}
+
+{% block body %}
+<section class="login hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form class="box"action="{{ path('login') }}" method="post">
+            <div class="field">
+              <div class="control is-extended">
+                <figure class="image is-128x128">
+                  <img class="is-square" src="{{ asset('Icon.svg') }}">
+                </figure>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control has-icons-left">
+                <input class="input" type="text" name="_username" placeholder="Username" required autofocus>
+                <span class="icon is-small is-left">
+                  <i class="mdi mdi-account"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-icons-left">
+                <input class="input" type="password" name="_password" placeholder="Password" required>
+                <span class="icon is-small is-left">
+                  <i class="mdi mdi-lock"></i>
+                </span>
+              </div>
+            </div>
+            <input type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
+            <div class="field">
+              <div class="control is-expanded">
+                <input class="button is-primary is-fullwidth" type="submit" value="Login">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
