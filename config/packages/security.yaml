@@ -17,6 +17,9 @@ security:
         login_path: login
         check_path: login
         enable_csrf: true
+      remember_me:
+        lifetime: 604800 # 1 week in seconds
+        always_remember_me: true
       login_throttling:
         max_attempts: 3
         interval: '1 hour'
@@ -25,7 +28,7 @@ security:
 
   access_control:
     - { path: ^/login, roles: PUBLIC_ACCESS }
-    - { path: ^/, roles: ROLE_USER }
+    - { path: ^/, roles: IS_AUTHENTICATED_REMEMBERED }
 
 when@test:
   security:
