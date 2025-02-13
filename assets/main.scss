@@ -1,0 +1,15 @@
+// Bulma's structure
+@use "bulma/sass/utilities" with (
+  // Colors
+  $primary: #284b63,
+  // Typography
+  $family-primary: "Quicksand",
+  $family-secondary: "Quicksand",
+  $family-code: "Cutive Mono"
+);
+@use "bulma/sass";
+
+// Fonts
+@forward "~@fontsource/quicksand";
+@forward "~@fontsource/cutive-mono";
+@forward "~@mdi/font/scss/materialdesignicons.scss";

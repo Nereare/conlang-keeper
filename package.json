@@ -1,0 +1,40 @@
+{
+  "name": "conlang-keeper",
+  "description": "A simple webapp to manage your conlang",
+  "version": "0.1.0",
+  "author": {
+    "name": "Igor Padoim",
+    "email": "igorpadoim@gmail.com",
+    "web": "https://nereare.com/"
+  },
+  "bugs": {
+    "web": "https://github.com/Nereare/conlang-keeper/issues"
+  },
+  "license": "WTFPL",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.0",
+    "@symfony/webpack-encore": "^5.0.0",
+    "core-js": "^3.38.0",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-notifier": "^1.15.0"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "dependencies": {
+    "@fontsource/cutive-mono": "^5.1.1",
+    "@fontsource/quicksand": "^5.1.1",
+    "@mdi/font": "^7.4.47",
+    "bulma": "^1.0.3",
+    "jquery": "^3.7.1"
+  }
+}
